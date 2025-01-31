@@ -14,22 +14,17 @@
 </head>
 
 <body>
-  <header>
-    <h1>Личный сайт</h1>
-  </header>  
-    <p>Который сделан на основе готового шаблона</p>
-    <div>
-      <h1><a href="/">Django Girls Blog</a></h1>
-    </div>
+  <div>
+    <h1><a href="/">Django Girls Blog</a></h1>
+  </div>
 
-    {% for post in posts %}
-      <div>
-        <p>published: {{ post.published_date }}</p>
-        <h1><a href="">{{ post.title }}</a></h1>
-        <p>{{ post.text|linebreaksbr }}</p>
-      </div>
-    {% endfor %}
-  <!-- сюда можно подключить jquery <script src="scripts/app.js" defer></script> -->
+  {% for post in posts %}
+  <div>
+    <p>published: {{ post.published_date }}</p>
+    <h1><a href="">{{ post.title }}</a></h1>
+    <p>{{ post.text|linebreaksbr }}</p>
+  </div>
+  {% endfor %}
 </body>
 
 </html>
